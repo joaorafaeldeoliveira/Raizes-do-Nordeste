@@ -1,17 +1,20 @@
+import './globals.css';
+import type { Metadata } from 'next';
 
-import "./globals.css";
+export const metadata: Metadata = {
+  title: 'Raizes do Nordeste'
+};
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) 
-{
+}) {
   return (
-    <html
-      lang="pt-br"
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="pt-br">
+      <body>
+        {children}
+      </body>
     </html>
   );
 }

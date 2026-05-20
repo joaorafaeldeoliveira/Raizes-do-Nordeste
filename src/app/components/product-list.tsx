@@ -1,0 +1,20 @@
+
+import {Product} from "@/src/types/product"
+import { ProductItem} from "@/src/app/components/product-item"
+
+type Props = { 
+    list: Product[]
+}
+
+export const ProductList = ({list}:Props) => { 
+    return ( 
+        <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
+            {list.map(item=>(
+                  <ProductItem
+                    key={item.id}
+                    item={item}
+                  />
+            ))}
+        </div>
+    )
+}

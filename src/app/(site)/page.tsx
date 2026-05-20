@@ -1,0 +1,71 @@
+import { Banners} from '@/src/app/components/home/banners';
+import {products} from "@/src/data/products";
+import Image from "next/image";
+import {ProductListSkeleton} from "@/src/app/components/home/product-list-skeleton"
+import {Suspense} from "react"
+import { MostViewedProducts} from "@/src/app/components/home/most-viewed-products"
+import { MostSoldProducts} from "@/src/app/components/home/most-sold-products"
+import {banners} from "@/src/data/banners"
+
+export default function Page () { 
+    return ( 
+        <div className="pb-20">
+           <Banners list={banners}/>
+           <div className="flex flex-col md:flex-row  gap-4 md:gap-8 mt-6 md:mt-12">
+
+                <div className="flex flex-1 py-6 border border-gray-200 rounded-sm">
+                    <div className="w-32 border-r border-gray-200 flex justify-center items-center">
+                        <Image
+                            src={'/assets/ui/truck-line.png'}
+                            alt=""
+                            width={40}
+                            height={40}
+                        />
+                    </div>
+                    <div className="flex-1 p">
+                        <div className="font-bold text-xl">Frete Gratis</div>
+                        <div className="text-gray-500">Para todo o Nordeste.</div>
+                    </div>
+                </div>
+
+                <div className="flex flex-1 py-6 border border-gray-200 rounded-sm">
+                    <div className="w-32 border-r border-gray-200 flex justify-center items-center">
+                        <Image
+                            src={'/assets/ui/discount-percent-line.png'}
+                            alt=""
+                            width={40}
+                            height={40}
+                        />
+                    </div>
+                    <div className="flex-1 p">
+                        <div className="font-bold text-xl">Muitas Ofertas</div>
+                        <div className="text-gray-500">Ofertas Imbativeis</div>
+                    </div>
+                </div>
+
+                <div className="flex flex-1 py-6 border border-gray-200 rounded-sm">
+                    <div className="w-32 border-r border-gray-200 flex justify-center items-center">
+                        <Image
+                            src={'/assets/ui/arrow-left-right-line.png'}
+                            alt=""
+                            width={40}
+                            height={40}
+                        />
+                    </div>
+                    <div className="flex-1 p">
+                        <div className="font-bold text-xl">Troca Facil</div>
+                        <div className="text-gray-500">Periodo de 30 dias</div>
+                    </div>
+                </div>
+           </div>
+
+            <Suspense fallback={<ProductListSkeleton />}>
+                <MostViewedProducts />
+            </Suspense>
+            <Suspense fallback={<ProductListSkeleton />}>
+                <MostSoldProducts/>
+            </Suspense>
+        </div>
+    )
+};
+
