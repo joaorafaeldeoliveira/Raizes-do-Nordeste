@@ -14,10 +14,10 @@ type MenuItem = {
 export function Header () { 
 
     const menu : MenuItem[] = [
-        {label:'Camisetas', href:'/categories/camisa'},
-        {label:'Kits', href:'/categories/kits'},
-        {label:'Acessórios', href:'/categories/Acessorios'},
-        {label:'Eletronicos', href:'/categories/Eletronicos'}
+        {label:'Cardápio', href:'/cardapio'},
+        {label:'Localizaçao', href:'/localizacao'},
+        {label:'Programa fidelidade', href:'/fidelidade'}
+
     ];
     const [menuOpened,setMenuOpened] = useState(false);
 
@@ -32,8 +32,8 @@ export function Header () {
                     <div className="w-32">
                         <Link href={'/'}>
                             <Image  
-                                src="/assets/ui/logo-black.png"
-                                alt="B7store"
+                                src="/assets/logo-black.png"
+                                alt="Raizes do Nordeste"
                                 width={120}
                                 height={40}
                             />
@@ -45,7 +45,7 @@ export function Header () {
                             <div className="flex-1 ">
                                 <ul className='flex gap-10 font-medium text-gray-500 '>
                                     {menu.map(item=> (
-                                        <li key={item.label} className="hover:text-gray-800">
+                                        <li key={item.label} className="hover:text-[#A66E41]">
                                             <Link key={item.label} href={item.href}>
                                                 {item.label}
                                             </Link>

@@ -49,8 +49,8 @@ export const Banners = ({list}:Props) => {
                             src={banner.img}
                             alt=""
                             width={1200}
-                            height={400}
-                            className="rounded-sm"
+                            height={600}
+                            className="rounded-sm h-90 object-center"
                         />
 
                     </Link>
@@ -60,7 +60,7 @@ export const Banners = ({list}:Props) => {
                  {list.map((banner,index)=> (
                     <div
                         key={index}
-                        className="w-4 h-4 bg-blue-600 rounded-full cursor-pointer"
+                        className="w-4 h-4 bg-[#A66E41] rounded-full cursor-pointer"
                         style ={{opacity: currentImage === index ? 1: 0.3}}
                         onClick={() => handleBannerClick(index)}
                     ></div>
