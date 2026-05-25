@@ -8,9 +8,10 @@ type MenuItem = {
 }
 
 export const Footer = () => {
-    const menu: MenuItem[] = [
-        { label: 'Camisas', href: '/categories/camisas' },
-        { label: 'Kits', href: '/categories/kits' }
+   const menu : MenuItem[] = [
+        {label:'Cardápio', href:'/cardapio'},
+        {label:'Localizaçao', href:'/localizacao'},
+        {label:'Programa fidelidade', href:'/fidelidade'}
     ];
     return (
         <footer>
@@ -45,8 +46,8 @@ export const Footer = () => {
                     <div className="flex flex-col md:flex-row justify-between items-center gap-6 py-16 md:py-10 border-b border-gray-700">
                         <Link href="/">
                             <Image
-                                src={'/assets/ui/logo-white.png'}
-                                alt="B7Store"
+                                src={'/assets/Logo.png'}
+                                alt="Raizes do Nordeste"
                                 width={143}
                                 height={48}
                             />
@@ -62,14 +63,14 @@ export const Footer = () => {
                             <h4 className="mb-6 text-center md:text-left">Precisa de ajuda?</h4>
                             <div className="flex flex-col md:flex-row gap-6">
                                 <FooterButton
-                                    href="mailto:suporte@b7web.com.br"
+                                    href="raizesNordeste@gmail.com"
                                     icon="/assets/ui/mail-line.png"
-                                    label="suporte@b7web.com.br"
+                                    label="raizesNordeste@gmail.com"
                                 />
                                 <FooterButton
                                     href=""
                                     icon="/assets/ui/phone-line.png"
-                                    label="(11) 99999-9999"
+                                    label="(45) 99999-9999"
                                 />
                             </div>
                         </div>
@@ -93,18 +94,6 @@ export const Footer = () => {
                                     icon="/assets/ui/twitter-x-fill.png"
                                 />
                             </div>
-                        </div>
-                    </div>
-                    <div className="flex flex-col md:flex-row gap-14 justify-between items-center py-16 md:py-10">
-                        <div className="text-xl text-center md:text-left">
-                            Se você leu isso aqui, saiba que está no caminho certo!<br />
-                            Continue estudando e você chegará lá...
-                        </div>
-                        <div className="flex justify-center">
-                            <FooterButton
-                                href="/"
-                                icon="/assets/ui/arrow-up-line.png"
-                            />
                         </div>
                     </div>
                 </div>
