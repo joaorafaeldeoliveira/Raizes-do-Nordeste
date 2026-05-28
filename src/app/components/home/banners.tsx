@@ -49,14 +49,14 @@ export const Banners = ({list}:Props) => {
                             src={banner.img}
                             alt=""
                             width={1200}
-                            height={600}
-                            className="rounded-sm h-90 object-center"
+                            height={300}
+                            className="rounded-sm h-50 object-center md:h-90"
                         />
 
                     </Link>
                 ))}
             </div>
-            <div className="mt-4 flex justify-center gap-4">
+            <div className="mt-25 flex justify-center gap-4 md:mt-4">
                  {list.map((banner,index)=> (
                     <div
                         key={index}

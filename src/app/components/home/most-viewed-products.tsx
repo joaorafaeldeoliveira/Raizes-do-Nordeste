@@ -1,18 +1,18 @@
 import {ProductList} from "@/src/app/components/product-list"
 import {products} from "@/src/data/products"
  
-export const  MostViewedProducts = async() => { 
+export const  SeasonalProducts = async() => { 
 
-     const bestSellers = products.filter(
-        (product) => product.bestSeller
+     const sazonais = products.filter(
+        (product) => product.category == 'seasonal'
     )
 
     return ( 
         <div className="mt-10">
-            <h2 className="text-2xl text-center md:text-left">Produtos mais Vistos</h2>
-            <p className="text-gray-500 text-center md:text-left">Campeões de visualização da nossa loja.</p>
+            <h2 className="text-2xl text-center md:text-left">Produtos Sazonais</h2>
+            <p className="text-gray-500 text-center md:text-left">Descubra os produtos mais populares da estação.</p>
             <div className="mt-9">
-                <ProductList list={bestSellers} />
+                <ProductList list={sazonais} />
             </div>
         </div>
     )
