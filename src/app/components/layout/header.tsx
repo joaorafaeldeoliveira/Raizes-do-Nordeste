@@ -5,6 +5,7 @@ import Link from "next/link"
 import {useState}  from "react"
 import { HeaderIcon}  from "./header-icon"
 import {HeaderSearch} from "./header-search"
+import { CartSidebar } from "../cart/sidebar";
 
 type MenuItem = {
     label:string;
@@ -24,7 +25,7 @@ export function Header () {
     return ( 
         <header className="bg-white border-b border-gray-200">
             <div className="bg-black text-white p-5 text-center">
-                <strong>FRETE GRATIS</strong> para todo o Nordeste nas compras acima de R$ 199,00.<strong>APROVEITA</strong>
+                <strong>FRETE GRATIS</strong> para todo o Nordeste nas compras acima de R$ 90,00.<strong>APROVEITA</strong>
             </div>
             <div className="p-6 w-full mx-auto max-w-6xl">
                 <div className="flex items-center">
@@ -65,9 +66,7 @@ export function Header () {
                                 <HeaderIcon src="/assets/ui/user-line.png" alt="Perfil"/>
                         </Link>
 
-                        <Link href={'/cart'}>
-                                <HeaderIcon src="/assets/ui/shopping-bag-4-line.png" alt="Carrinho"/>
-                        </Link>
+                        <CartSidebar/>
                         <div className="md:hidden" onClick={()=> setMenuOpened(!menuOpened)}>
                                 <HeaderIcon 
                                     src="/assets/ui/menu-line.png" 
