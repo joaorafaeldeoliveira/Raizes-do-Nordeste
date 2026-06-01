@@ -46,7 +46,7 @@ export const ProductsTab = async() => {
     ];
 
     return (
-        <Tabs defaultValue="sushi">
+        <Tabs defaultValue="breakfast">
             <TabsList className="flex">
                 {tabs.map(item=>(
                     <TabsTrigger 

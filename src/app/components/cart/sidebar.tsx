@@ -21,7 +21,7 @@ export const CartSidebar = () => {
         <div>   
             <Sheet>
                 <SheetTrigger asChild>
-                    <Button className="relative  h-12 w-12 text-center items-center">
+                    <Button className="relative  h-12 w-15 text-center items-center">
                         <ShoppingCartIcon className="items-center"/>
                         {cart.length > 0 &&
                         <div className="absolute -right-1 -top-1 h-6 w-6 bg-red-600 rounded-full"></div>}
@@ -37,7 +37,7 @@ export const CartSidebar = () => {
                         ))}
                     </div>
                     <Separator className="my-4"/>
-                    <div className="flex justify-between items-center text-xs">
+                    <div className="flex justify-between items-center text-xs ml-4">
                         <div>Subtotal</div>
                         <div>R${subtotal.toFixed(2)}</div>
                     </div>

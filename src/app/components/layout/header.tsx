@@ -17,7 +17,7 @@ export function Header () {
     const menu : MenuItem[] = [
         {label:'Cardápio', href:'/cardapio'},
         {label:'Localizaçao', href:'/localizacao'},
-        {label:'Programa fidelidade', href:'/fidelidade'}
+        {label:'Programa fidelidade', href:'/account/points'}
 
     ];
     const [menuOpened,setMenuOpened] = useState(false);
@@ -25,7 +25,7 @@ export function Header () {
     return ( 
         <header className="bg-white border-b border-gray-200">
             <div className="bg-black text-white p-5 text-center">
-                <strong>FRETE GRATIS</strong> para todo o Nordeste nas compras acima de R$ 90,00.<strong>APROVEITA</strong>
+                <strong>FRETE GRATIS</strong> nas compras acima de R$ 90,00.<strong> APROVEITE</strong>
             </div>
             <div className="p-6 w-full mx-auto max-w-6xl">
                 <div className="flex items-center">
@@ -62,7 +62,7 @@ export function Header () {
                         </div>
                     </div>
                     <div className="flex gap-4">
-                        <Link href={'/my-orders'}>
+                        <Link href={'/account'}>
                                 <HeaderIcon src="/assets/ui/user-line.png" alt="Perfil"/>
                         </Link>
 
