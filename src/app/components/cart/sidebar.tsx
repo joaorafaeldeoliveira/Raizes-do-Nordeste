@@ -5,7 +5,7 @@ import { Separator } from "@/src/app/components/ui/separator"
 import { useCartStore } from "@/src/app/store/cart-store"
 import { CartItem } from "@/src/app/components/cart/item"
 import { useState } from "react"
-import { CheckoutDialog } from "@/src/app/components/checkout/dialog"
+import { CheckoutDialog } from "@/src/app/components/checkout/checkout-dialog"
 
 export const CartSidebar = () => {
 

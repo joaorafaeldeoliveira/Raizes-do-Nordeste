@@ -28,14 +28,6 @@ export function AccountMenu() {
         icon={MapPin}
         href="/account/address"
       />
-
-      <AccountCard
-        title="Cupons"
-        description="Descontos especiais para você"
-        icon={Ticket}
-        href="/account/coupons"
-      />
-
       <AccountCard
         title="Pontos do Sertão"
         description="Ganhe benefícios e recompensas"

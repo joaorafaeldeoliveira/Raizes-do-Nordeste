@@ -106,7 +106,7 @@ export const ProductsTab = () => {
               ))}
             </div>
           ) : (
-            <ProductEmpty />
+            <ProductEmpty  category={item.title} />
           )}
         </TabsContent>
       ))}
