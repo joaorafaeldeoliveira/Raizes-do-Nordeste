@@ -12,14 +12,16 @@ export function AuthScreen() {
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-[#F8F4ED] px-4">
-      <div className="w-full max-w-md rounded-[32px] bg-white p-8 shadow-2xl">
+      <div className="w-full max-w-md rounded-[32px] bg-white p-8">
         <div className="mb-8 text-center">
           <h1 className="mt-4 text-3xl font-bold text-[#5C3B1E]">
             Raízes do Nordeste
           </h1>
 
           <p className="text-zinc-500">
-            Entre na sua conta
+            {mode === 'login'
+              ? 'Entre na sua conta'
+              : 'Crie sua conta'}
           </p>
         </div>
 

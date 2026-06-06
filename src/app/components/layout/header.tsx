@@ -16,7 +16,7 @@ export function Header () {
 
     const menu : MenuItem[] = [
         {label:'Cardápio', href:'/cardapio'},
-        {label:'Localizaçao', href:'/localizacao'},
+        {label:'Localizaçao', href:'/locations'},
         {label:'Programa fidelidade', href:'/account/points'}
 
     ];

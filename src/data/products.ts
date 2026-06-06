@@ -40,7 +40,7 @@ export const products: Product[] = [
     cityAvailability: [
       "londrina",
       "cascavel",
-      "presidente-prudente",
+      "guarulhos",
       "recife",
     ],
   },
@@ -55,7 +55,7 @@ export const products: Product[] = [
     cityAvailability: [
       "londrina",
       "cascavel",
-      "presidente-prudente",
+      "guarulhos",
     ],
   },
 
@@ -84,7 +84,7 @@ export const products: Product[] = [
     cityAvailability: [
       "londrina",
       "cascavel",
-      "presidente-prudente",
+      "guarulhos",
       "recife",
     ],
   },
@@ -139,7 +139,7 @@ export const products: Product[] = [
     bestSeller: false,
     cityAvailability: [
       "londrina",
-      "presidente-prudente",
+      "guarulhos",
     ],
   },
 
@@ -153,7 +153,7 @@ export const products: Product[] = [
     cityAvailability: [
       "londrina",
       "cascavel",
-      "presidente-prudente",
+      "guarulhos",
       "recife",
     ],
   },
@@ -210,7 +210,7 @@ export const products: Product[] = [
     cityAvailability: [
       "maringa",
       "cascavel",
-      "presidente-prudente",
+      "guarulhos",
     ],
   },
 
@@ -224,7 +224,7 @@ export const products: Product[] = [
     cityAvailability: [
       "maringa",
       "cascavel",
-      "presidente-prudente",
+      "guarulhos",
       "recife",
     ],
   },
@@ -239,7 +239,7 @@ export const products: Product[] = [
     cityAvailability: [
       "maringa",
       "cascavel",
-      "presidente-prudente",
+      "guarulhos",
       "recife",
     ],
   },
@@ -255,7 +255,7 @@ export const products: Product[] = [
     bestSeller: false,
     cityAvailability: [
       "recife",
-      "maringa",
+      "guarulhos",
     ],
   },
 
@@ -267,7 +267,7 @@ export const products: Product[] = [
     price: 12,
     bestSeller: true,
     cityAvailability: [
-      "maringa",
+      "guarulhos",
       "cascavel",
       "recife",
     ],

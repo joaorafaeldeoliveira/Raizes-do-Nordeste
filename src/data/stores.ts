@@ -12,8 +12,8 @@ export const stores = [
   },
 
   {
-    id: 'presidente-prudente',
-    city: 'Presidente Prudente',
+    id: 'guarulhos',
+    city: 'Guarulhos',
     state: 'SP',
   },
 
