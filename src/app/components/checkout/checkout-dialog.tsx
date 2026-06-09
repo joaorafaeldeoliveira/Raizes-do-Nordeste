@@ -17,6 +17,7 @@ import { StepReview } from './step-review'
 import { StepAddress } from './step-address'
 import { StepPayment } from './step-payment'
 import { StepFinish } from './step-finish'
+import { StepAuth } from './step-auth'
 
 type Props = {
   open: boolean
@@ -30,23 +31,26 @@ export const CheckoutDialog = ({
   onOpenChange,
 }: Props) => {
   const [step, setStep] =
-    useState<CheckoutSteps>(
-      'review'
-    )
+  useState<CheckoutSteps>(
+    'auth'
+  )
 
   let progressPct = 0
 
   switch (step) {
+    case 'auth':
+      progressPct = 20
+      break
     case 'review':
-      progressPct = 25
+      progressPct = 40
       break
 
     case 'address':
-      progressPct = 50
+      progressPct = 65
       break
 
     case 'payment':
-      progressPct = 75
+      progressPct = 85
       break
 
     case 'finished':
@@ -64,6 +68,8 @@ export const CheckoutDialog = ({
       <DialogContent className="max-w-2xl">
         <DialogHeader>
           <DialogTitle>
+            {step === 'auth' &&
+              'Entrar'}
             {step ===
               'review' &&
               'Revisar Pedido'}
@@ -87,6 +93,14 @@ export const CheckoutDialog = ({
         />
 
         <div className="mt-6">
+                  {step ===
+            'auth' && (
+            <StepAuth
+              setStep={
+                setStep
+              }
+            />
+          )}
           {step ===
             'review' && (
             <StepReview

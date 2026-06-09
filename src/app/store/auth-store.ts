@@ -11,6 +11,8 @@ type User = {
 type AuthStore = {
   user: User | null
 
+  isAuthenticated: boolean
+
   login: (
     email: string,
     password: string
@@ -34,28 +36,74 @@ const MOCK_USER = {
 export const useAuthStore =
   create<AuthStore>()(
     persist(
-      set => ({
+      (set, get) => ({
         user: null,
 
-        login: (email, password) => {
+        isAuthenticated: false,
+
+        login: (
+          email,
+          password
+        ) => {
           if (
-            email === MOCK_USER.email &&
-            password === MOCK_USER.password
+            email ===
+              MOCK_USER.email &&
+            password ===
+              MOCK_USER.password
           ) {
             set({
               user: {
-                name: MOCK_USER.name,
-                email: MOCK_USER.email,
+                name:
+                  MOCK_USER.name,
+                email:
+                  MOCK_USER.email,
               },
+
+              isAuthenticated: true,
             })
 
             return true
+          }
+          const storedUser =
+            localStorage.getItem(
+              'mock-user'
+            )
+
+          if (storedUser) {
+            const parsedUser =
+              JSON.parse(
+                storedUser
+              )
+
+            if (
+              email ===
+                parsedUser.email &&
+              password ===
+                parsedUser.password
+            ) {
+              set({
+                user: {
+                  name:
+                    parsedUser.name,
+                  email:
+                    parsedUser.email,
+                },
+
+                isAuthenticated: true,
+              })
+
+              return true
+            }
           }
 
           return false
         },
 
-        register: ( name,email,password) => {
+        register: (
+          name,
+          email,
+          password
+        ) => {
           const newUser = {
             name,
             email,
@@ -72,6 +120,8 @@ export const useAuthStore =
 
           set({
             user: newUser,
+
+            isAuthenticated: true,
           })
 
           return true
@@ -80,6 +130,8 @@ export const useAuthStore =
         logout: () =>
           set({
             user: null,
+
+            isAuthenticated: false,
           }),
       }),
       {
