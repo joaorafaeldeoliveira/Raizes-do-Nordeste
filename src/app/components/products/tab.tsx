@@ -34,7 +34,6 @@ export const ProductsTab = () => {
           item.cityAvailability?.includes(city)
       ),
     },
-
     {
       title: "Regional",
       value: "regional",
@@ -44,7 +43,6 @@ export const ProductsTab = () => {
           item.cityAvailability?.includes(city)
       ),
     },
-
     {
       title: "Rápidos",
       value: "fast",
@@ -54,7 +52,6 @@ export const ProductsTab = () => {
           item.cityAvailability?.includes(city)
       ),
     },
-
     {
       title: "Bebidas",
       value: "drinks",
@@ -64,7 +61,6 @@ export const ProductsTab = () => {
           item.cityAvailability?.includes(city)
       ),
     },
-
     {
       title: "Sazonal",
       value: "seasonal",
@@ -77,27 +73,29 @@ export const ProductsTab = () => {
   ];
 
   return (
-    <Tabs defaultValue={tabs[0].value}>
-      <TabsList className="flex">
-        {tabs.map(item => (
-          <TabsTrigger
-            key={item.value}
-            value={item.value}
-            className="flex-1 text-sm"
-          >
-            {item.title}
-          </TabsTrigger>
-        ))}
-      </TabsList>
+    <Tabs defaultValue={tabs[0].value} className="w-full">
+      <div className="w-full mb-8 p-3 md:p-0 md:mb-0">
+        <TabsList className="grid grid-cols-2 gap-2 bg-transparent sm:grid-cols-3 md:flex md:flex-wrap md:justify-center lg:justify-start">
+          {tabs.map(item => (
+            <TabsTrigger
+              key={item.value}
+              value={item.value}
+              className="p-3 bg-neutral-50 data-[state=active]:bg-neutral-200 text-xs sm:text-sm text-center rounded-md border border-neutral-200 shadow-sm md:flex-1 lg:flex-none lg:px-6"
+            >
+              {item.title}
+            </TabsTrigger>
+          ))}
+        </TabsList>
+      </div>
 
       {tabs.map(item => (
         <TabsContent
           key={item.value}
           value={item.value}
-          className="mt-6"
+          className="mt-0 md:mt-0"
         >
           {item.products.length > 0 ? (
-            <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-4">
+            <div className="grid grid-cols-2 gap-4 mt-10 sm:grid-cols-3 md:grid-cols-4 md:mt-0 lg:grid-cols-5 xl:grid-cols-6">
               {item.products.map(product => (
                 <ProductItem
                   key={product.id}
@@ -106,7 +104,9 @@ export const ProductsTab = () => {
               ))}
             </div>
           ) : (
-            <ProductEmpty  category={item.title} />
+            <div className="mt-10 md:mt-1">
+              <ProductEmpty category={item.title} />
+            </div>
           )}
         </TabsContent>
       ))}

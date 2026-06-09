@@ -28,11 +28,11 @@ export const ProductItem = ({ item }: Props) => {
 
   return (
     <div>
-      <div className="rounded-md overflow-hidden">
+      <div className="rounded-md overflow-hidden mt-10 md:mt-0">
         <img
           src={item.image}
           alt={item.name}
-          className="w-full h-32 object-cover"
+          className="w-full h-32 object-cover md:mt-0"
         />
       </div>
 
