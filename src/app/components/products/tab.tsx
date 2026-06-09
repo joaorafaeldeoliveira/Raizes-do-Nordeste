@@ -83,7 +83,7 @@ export const ProductsTab = () => {
           <TabsTrigger
             key={item.value}
             value={item.value}
-            className="flex-1"
+            className="flex-1 text-sm"
           >
             {item.title}
           </TabsTrigger>

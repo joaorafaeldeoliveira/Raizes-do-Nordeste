@@ -5,7 +5,7 @@ import { Suspense } from "react";
 
 export default async function Page() {
   return (
-    <div className="mx-3">
+    <div className="">
       <StoreSelector />
 
       <Suspense

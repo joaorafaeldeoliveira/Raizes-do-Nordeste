@@ -33,7 +33,7 @@ export function Header () {
                     <div className="w-32">
                         <Link href={'/'}>
                             <Image  
-                                src="/assets/logo-black.png"
+                                src="/assets/Logo-black.png"
                                 alt="Raizes do Nordeste"
                                 width={120}
                                 height={40}

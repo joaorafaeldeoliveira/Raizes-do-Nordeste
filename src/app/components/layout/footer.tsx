@@ -10,8 +10,8 @@ type MenuItem = {
 export const Footer = () => {
    const menu : MenuItem[] = [
         {label:'Cardápio', href:'/cardapio'},
-        {label:'Localizaçao', href:'/localizacao'},
-        {label:'Programa fidelidade', href:'/fidelidade'}
+        {label:'Localizaçao', href:'/locations'},
+        {label:'Programa fidelidade', href:'/account/points'}
     ];
     return (
         <footer>
